@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pandas
+numpy
+whisper
+torch
+pyannote.audio
+sentence-transformers
+scikit-learn
+spacy
+jinja2
+python-multipart

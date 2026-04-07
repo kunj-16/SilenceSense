@@ -1,0 +1,10 @@
+Participant: {{ speaker }}
+
+Participation:
+- Total Time: {{ time }} seconds
+- Turns: {{ turns }}
+
+Insights:
+{% for i in insights %}
+- {{ i }}
+{% endfor %}
