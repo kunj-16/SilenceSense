@@ -1,3 +1,7 @@
+import os
+
+os.makedirs("data/uploads", exist_ok=True)
+os.makedirs("data/reports", exist_ok=True)
 from fastapi import FastAPI, UploadFile, Form
 import json
 
@@ -25,7 +29,9 @@ from src.app.mailer.email_sender import send_email_with_attachment
 
 app = FastAPI()
 embedder = EmbeddingModel()
-
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 @app.post("/analyze/chat")
 async def analyze_chat(
